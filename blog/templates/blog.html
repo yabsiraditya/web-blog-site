@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+    {{title}}
+{% endblock head_title %}
+
+
+{% block contents %}
+    <h1 class="mt-3">{{heading}}</h1>
+    <div class="row">
+        {% for post in Articles %}
+        <div class="col-md-4 g-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{post.judul}}</h5>
+                    <span>{{post.publicDate}}</span>
+                    <br>
+                    <span class="badge text-bg-primary">{{post.kategori.nama}}</span>
+                    <p class="card-text"  
+                    style="            
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                    text-overflow: ellipsis;">{{post.isi}}<p>
+                    <a type="button" href="/blog/detail/{{post.slugArtikel}}/" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock contents %}

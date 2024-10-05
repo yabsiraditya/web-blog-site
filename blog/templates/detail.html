@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+    {{title}}
+{% endblock head_title %}
+
+
+{% block contents %}
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h5 class="card-title">{{DetailArticle.judul}}</h5>
+            <span>{{DetailArticle.publicDate}}</span>
+            <br>
+            <span class="badge text-bg-primary">{{DetailArticle.kategori.nama}}</span>
+            <p class="card-text">{{DetailArticle.isi}}<p>
+        </div>
+        <div class="col-md-4">
+            <ul>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock contents %}
