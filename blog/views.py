@@ -21,7 +21,7 @@ def detail_kategori(request, kategoriInput):
 
     context = {
         'title':'Kategori Article',
-        'heading':'Selamat Datang Di Halaman Kategori',
+        'heading':'Selamat Datang Di Halaman Kategori: ' + kategoriInput.capitalize(),
         'Articles': articles,
     }
     return render(request, 'kategori.html', context)
