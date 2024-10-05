@@ -15,13 +15,16 @@
             <p class="card-text">{{DetailArticle.isi}}<p>
         </div>
         <div class="col-md-4">
-            <ul>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-            </ul>
+            <div class="card">
+                <div class="card-header">
+                    Kategori
+                </div>
+                <ul class="list-group list-group-flush">
+                    {% for categories in category %}
+                        <li class="list-group-item"><a class="text-decoration-none" href="/blog/kategori/{{categories.nama}}/">{{categories.nama}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 

@@ -6,4 +6,5 @@ from . import views
 urlpatterns = [
     path('', views.index),
     path('detail/<slug:slugInput>/', views.detail_artikel),
+    path('kategori/<slug:kategoriInput>/', views.detail_kategori),
 ]
